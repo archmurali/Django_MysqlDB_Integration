@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'helloapp'
 ]
 
 MIDDLEWARE = [
@@ -74,10 +76,15 @@ WSGI_APPLICATION = 'helloworld.wsgi.application'
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+   "default": {
+            "CONN_MAX_AGE": 0, 
+            "ENGINE": "django.db.backends.mysql", 
+            "HOST": "localhost", 
+            "NAME": "way2_way2", 
+            "PASSWORD": "Qwerty123!", 
+            "PORT": "3306", 
+            "USER": "django"
+        }
 }
 
 
